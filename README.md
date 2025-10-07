@@ -89,15 +89,39 @@ TABULATION:
 
 
 Calculation
-1.	ma (Theory) = am/ac =
-2.	ma(Practical) = (Emax-Emin)/(Emax+Emin) =
+1.	ma (Theory) = am/ac =6.4/12.8=0.5
+2.	ma(Practical) = (Emax-Emin)/(Emax+Emin) =11.6/26.8=0.43
 
 
 MODEL GRAPH
  <img width="919" height="1290" alt="image" src="https://github.com/user-attachments/assets/55326c5b-7dd5-4873-aaf6-d219bb7c4420" />
+PROGRAME
+Am=6.4;
+fm=492;
+Ac=12.8;
+fc=4920;
+fs=492000;
+t=0:1/fs:2/fm;
+m=Am*cos(2*3.14*fm*t);
+subplot(3,1,1);
+plot(t,m);
+c=Ac*cos(2*3.14*fc*t);
+subplot(3,1,2);
+plot(t,c);
+s=(Ac+Am*cos(2*3.14*fm*t)).*cos(2*3.14*fc*t);
+subplot(3,1,3);
+plot(t,s);
 
  
  
+ OUTPUT
+ <img width="1917" height="1025" alt="image" src="https://github.com/user-attachments/assets/2fdfc67f-1210-4687-a56b-c24a8e093da9" />
+
+
+
+ CALCULATION
+ ![WhatsApp Image 2025-10-07 at 14 27 23_35b7c2bb](https://github.com/user-attachments/assets/6986d653-42e9-4bab-b47b-6ba0e03545f8)
+
 
 
 RESULT:
